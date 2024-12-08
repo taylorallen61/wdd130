@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAQ</title>
+    <link type="text/css" rel="stylesheet" href="sitesh.css">
 </head>
-<body>
+<body class="faq-body">
+
     <header> 
         <a id="logo_link"  href="index.html">
             <img src="images/shlogo.png" class="logo" alt="SH logo">
@@ -17,77 +19,62 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>
+        <section class="full-width">
+            <h1 class="full-width">
                 Frequently Asked Questions
             </h1>
         </section>
         <div class="questions">
             <div class="qanda" id="q1">
-                <section>
-                    <h3>
-                        Why should I shop at Second Helpings?
-                    </h3>
-                </section>
-                <div>
-                    <p>
-                        Second Helpings is a non-profit organization and has a mission to help those in need. All proceeds go to victims of sexual assault, abuse, and domestic violence. When you shop at second helpings you are able to have a fun shopping experience while also helping those in your community who are struggling. 
-                    </p>
-                </div>
+                        <button class="accordion">Why should I shop at Second Helpings?
+                        </button>
+                        <div class="panel">
+                        <p>Second Helpings is a non-profit organization and has a mission to help those in need. All proceeds go to victims of sexual assault, abuse, and domestic violence. When you shop at second helpings you are able to have a fun shopping experience while also helping those in your community who are struggling. 
+                        </p>
+                        </div>
+               
             </div>
             <div class="qanda" id="q2">
-                <section>
-                    <h3>
-                        Can I receive free items?
-                    </h3>
-                </section>
-                <div>
+                <button class="accordion">Can I receive free items?
+                </button>
+                <div class="panel">
                     <p>
                         Not all members of the community get free items. If you are a victim of sexual assault, abuse or domestic violence, the family crises is here to help you. You are able to meet with our victim advocates who are able to give you resources to help you. One of those resources is providing you with any physical needs you may need which can be found in the thrift store.
                     </p>
                 </div>
             </div>
             <div class="qanda" id="q3">
-                <section>
-                    <h3>
-                        Where does the proceeds of sales go?
-                    </h3>
-                </section>
-                <div>
+                <button class="accordion">Where does the proceeds of sales go?
+                </button>
+                <div class="panel">
                     <p>
                         One-hundred percent of proceeds go straight to victims of sexual assault, abuse, domestic violence and stalking. 
                     </p>
                 </div>
             </div>
             <div class="qanda" id="q4">
-                <section>
-                    <h3>
-                        How do I donate?
-                    </h3>
-                </section>
-                <div>
+                <button class="accordion">How do I donate?
+                </button>
+                <div class="panel">
                     <p>
                         You are able to donate during any of the operational hours,z 10-4:30 mondays-saturdays. If you go to the back of the store you will be able to see a big painted mural. On the left side of the mural you will see a doorbell that says “ring for donations” when you ring that doorbell you will be assisted and your donations will be collected. We appreciate all donations as they truly do help community members in need. 
                     </p>
                 </div>
             </div>
             <div class="qanda" id="q5">
-                <section>
-                    <h3>
-                        What items can I donate?
-                    </h3>
-                </section>
-                <div>
-                    <p>
-                        We accept all food and clothing items. Our food will be given away during our foodbank on Wednesdays and Fridays. We discourage donating large items such as bikes or furniture as our thrift store is small and there isnt too much room for those items. 
-                    </p>
+                <button class="accordion"> What items can I donate?
+                </button>
+                <div class="panel">
+                <p>We accept all food and clothing items. Our food will be given away during our foodbank on Wednesdays and Fridays. We discourage donating large items such as bikes or furniture as our thrift store is small and there isnt too much room for those items. 
+                </p>
                 </div>
+               
             </div>
         </div>
 
     </main>
     <footer>
-        <img src="images/Second Helpings.png" class="logo" alt="SH logo">
+        <img src="images/SecondHelpings.png" class="logo" alt="SH logo">
         <p>Second Helpings &copy; 2024 - Taylor Allen</p>
         <p><a href="site-plan.html">Site Plan</a></p>
         <p><a href="index.html">Home</a></p>
@@ -103,5 +90,21 @@
             </a>
         </div>
     </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
 </body>
 </html>
