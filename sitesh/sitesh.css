@@ -8,7 +8,11 @@ body {
     font-family: "Montserrat", 'Arial', sans-serif;
     color:#515151;
 }
-
+main{
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+}
 .faq-body{
     background-color: #7A7A7A;
 }
@@ -17,10 +21,12 @@ h1 {
     color: #515151;
 }
 header {
+    max-width:100%;
     background-color: #ffffff;
     display: grid;
     grid-template-columns: 150px auto;
 }
+
 .lighterfont {
     color: #515151;
 }
@@ -28,6 +34,7 @@ nav {
     display: flex;
     justify-content: space-around;
     flex-wrap:nowrap;
+    width:100%;
 }
 
 nav a {
@@ -35,17 +42,18 @@ nav a {
     text-decoration: none;
     text-align: center;
     padding: 10px;
-    width:250px;
+    
     display:inline;
     font-size:.8em;
 }
 
 nav a:hover {
-    background-color: #aaaaaa;
+    background-color: #F0EBD8;
     color: #26C6E2;
 }
 nav, footer {
     flex-direction: row;
+    width:100%;
 }
 footer{
     margin-top:50px;
@@ -53,7 +61,11 @@ footer{
     display: flex;
     justify-content:space-around;
     grid-template-columns: 150px auto;
-    overflow:auto;
+    overflow:hidden;
+}
+
+footer.nomargin {
+    margin-top:0px;
 }
 
 footer a {
@@ -75,18 +87,21 @@ footer p a:hover {
 }
 footer .social img{ 
     padding-top: 15px;
+    height: 50px;
 }
 
 nav a {
     display: block;
     padding: 10px;
     align-content: center;
+    width:250px;
 }
 #logo_link {
     width: 80px;
 }
 .logo {
     width:100px;
+    max-height: 100px;
 }
 #logo_link {
     padding-top: 5px;
@@ -121,6 +136,27 @@ section {
     padding: 15px 15px 15px 15px;
     margin-top: 45px;
     background-color:#ffffff;
+}
+.flexpage {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    margin:0px;
+}
+.involvecol {
+    display:block;
+    flex-basis: 50%;
+    padding: 40px 50px 40px 50px;
+    border: #7A7A7A thin solid;
+    text-align: center;
+}
+.involvecol img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.involvecol .wideimage {
+    width: 400px;
 }
 .info-box p{
     margin-left:25px;
